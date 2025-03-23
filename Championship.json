@@ -1,0 +1,108 @@
+{
+  "info": {
+    "name": "Championship",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "bruno",
+      "event": []
+    },
+    {
+      "name": "Créer un utilisateur",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "{",
+              "    \"name\": \"Admin User\",",
+              "    \"email\": \"admin@example.com\",",
+              "    \"password\": \"password123\"",
+              "}",
+              ""
+            ]
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": "http://localhost:8080/api/users"
+      }
+    },
+    {
+      "name": "Créer un championnat",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "{",
+              "    \"name\": \"Ligue 1\",",
+              "    \"description\": \"Championnat de France de football\"",
+              "}"
+            ]
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": "http://localhost:8080/api/championships"
+      }
+    },
+    {
+      "name": "Créer des équipes",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "{",
+              "    \"name\": \"Paris Saint-Germain\",",
+              "    \"description\": \"Club de la capitale\"",
+              "}"
+            ]
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": "http://localhost:8080/api/teams"
+      }
+    },
+    {
+      "name": "Ajouter une équipe au championnat",
+      "event": [],
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": "http://localhost:8080/api/teams/1/championship/1"
+      }
+    },
+    {
+      "name": "Créer une journée",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "{",
+              "    \"name\": \"Journée 1\",",
+              "    \"date\": \"2025-03-30\"",
+              "}"
+            ]
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": "http://localhost:8080/api/days/championship/1"
+      }
+    }
+  ],
+  "variable": []
+}
